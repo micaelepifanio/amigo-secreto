@@ -18,3 +18,7 @@ Além disso, foram implementadas funcionalidades extras para melhorar a experiê
 - **HTML5**: Estrutura da página.
 - **CSS3**: Estilização (arquivo `style.css`).
 - **JavaScript**: Lógica de interação e manipulação do DOM (arquivo `app.js`).
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0f86c18b-632c-4e50-8a74-d122eb10c600" width="700px" />
+</div>
