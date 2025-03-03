@@ -1,8 +1,9 @@
 let amigos = [];
 
-function adicionarAmigo() {
-    let nomeAmigo = document.querySelector('input').value;
 
+function adicionarAmigo() {
+    let nomeAmigo = capitalizeFirstLetter(document.querySelector('input').value);
+    
     if (nomeAmigo == '') {
         alert('Por favor, insira um nome.');
     } else if (amigos.includes(nomeAmigo)) {
@@ -23,7 +24,7 @@ function limparCampo() {
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos'); // Seleciona a <ul>
     lista.innerHTML = ''; // Limpa os itens existentes na lista
-
+    
     //Percorre o array de amigos e cria um <li> para cada nome
     for (let i = 0; i < amigos.length; i++) {
         let item = document.createElement('li'); // Cria um novo <li>
@@ -41,7 +42,7 @@ function sortearAmigo(array) {
     } else {
         alert('Não há nomes para sortear.');
     }
-   
+    
 }
 
 // Seleciona o campo de entrada
@@ -53,3 +54,8 @@ campoNome.addEventListener('keypress', function(event) {
         adicionarAmigo();
     }
 });
+
+//Garante a formatação correta de nomes: apenas o primeiro caractere maiúsculo
+function capitalizeFirstLetter(texto) {
+    return texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase();
+}
